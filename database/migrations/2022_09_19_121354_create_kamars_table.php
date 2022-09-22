@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('kamars', function (Blueprint $table) {
             $table->id();
+            $table->string('tipe_kamar');
+            $table->integer('jumlah_kamar');
             $table->timestamps();
         });
     }

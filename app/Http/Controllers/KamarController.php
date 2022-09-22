@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kamar;
 use Illuminate\Http\Request;
 
 class KamarController extends Controller
@@ -13,7 +14,13 @@ class KamarController extends Controller
      */
     public function index()
     {
-        //
+    //   //get posts
+    //   $kamar = Kamar::latest()->get();
+    //   //return collection of posts as a resource
+    //   return new KamarResource(true, 'List Data Kamar', $kamar);
+
+     $datakamar = Kamar::latest()->paginate(5); 
+     return view ('kamar.index',compact('datakamar'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -23,7 +30,7 @@ class KamarController extends Controller
      */
     public function create()
     {
-        //
+        return view('Kamar.create');
     }
 
     /**
@@ -34,7 +41,18 @@ class KamarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
+        $kamar = Kamar::create([
+        'tipe_kamar'     => $request->tipe_kamar,
+        'jumlah_kamar'   => $request->jumlah_kamar,
+    ]);
+
+    $this->validate($request, [
+        'tipe_kamar' => 'required',
+        'jumlah_kamar' => 'required',
+    ]);
+    
+    return redirect('/kamar')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -45,7 +63,7 @@ class KamarController extends Controller
      */
     public function show($id)
     {
-        //
+        //  
     }
 
     /**
@@ -56,7 +74,8 @@ class KamarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kamar = Kamar::findorfail($id);
+        return view('Kamar.edit', compact('kamar'));
     }
 
     /**
@@ -68,7 +87,20 @@ class KamarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $kamar->update([
+        //     'tipe_kamar'     => $request->tipe_kamar,
+        //     'jumlah_kamar'   => $request->jumlah_kamar,
+        // ]);
+        
+        
+        $this->validate($request, [
+            'tipe_kamar' => 'required',
+            'jumlah_kamar' => 'required',
+        ]);
+
+        $kamar = Kamar::findorfail($id);
+        $kamar->update($request->all());
+        return redirect('/kamar')->with('success', 'Data Berhasil Di Update');
     }
 
     /**
@@ -79,6 +111,8 @@ class KamarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kamar = Kamar::findorfail($id);
+        $kamar->delete();
+        return back()->with('destroy', 'Data Ke Destroy');
     }
 }
