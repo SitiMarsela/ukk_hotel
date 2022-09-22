@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    --primary: #FEA116
+}
+
+.btn.btn-primary{
+    color: #FFFFFF;
+    background-color: var(--primary);
+    padding: 0;
+    font-weight: normal;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.fa{
+   color: var(--primary);
+}
+
+
+#home{
+    background-image: url(./carousel3.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+#home .container .latar{
+    padding: 200px 0;
+}
+
+
+#home .container .latar h1{
+    font-family: sans-serif;
+    font-size: 50px;
+    margin-top: 3rem;
+}
+
+
+
+#about{
+    padding-top: 50px;
+}
+
+#room{
+    padding-top: 50px;
+}
+
+

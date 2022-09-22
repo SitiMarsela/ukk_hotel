@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Resepsionis;
 use Illuminate\Http\Request;
-use App\Http\Controllers\ResepsionisController;
 
 class ResepsionisController extends Controller
 {
