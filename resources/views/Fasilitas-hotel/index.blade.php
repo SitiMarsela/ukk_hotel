@@ -14,7 +14,6 @@
                     <th scope="col">ID</th>
                     <th scope="col">Nama Fasilitas</th>
                     <th scope="col">Deskripsi</th>
-                    <th scope="col">Gambar</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -24,9 +23,8 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $hotel->nama_fasilitas_hotel}}</td>
                     <td>{{ $hotel->deskripsi}}</td>
-                    <td>{{ $hotel->url_gambar}}</td>
                     <td>
-                        <a class="btn btn-outline-info" href="{{ route('edit-fasilitas',$hotel->id) }}">Edit</a> 
+                        <a class="btn btn-outline-info" href="{{ route('update-fasilitas',$hotel->id) }}">Edit</a> 
                     </td>
                 </tr>
                 @endforeach

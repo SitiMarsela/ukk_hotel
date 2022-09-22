@@ -15,10 +15,10 @@
                             <label class="form-label my-3">Deskripsi</label>
                             <input type="text" name="deskripsi"  class="form-control">
                         </div>
-                        <div class="form-group my-3">
+                        {{-- <div class="form-group my-3">
                             <label class="form-label my-3">Gambar</label>
                             <input type="text" name="url_gambar"  class="form-control">
-                        </div>
+                        </div> --}}
                         <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
                     </form>
                 </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>HOTEL STARBHAK</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -11,25 +11,8 @@
 </head>
   <body>
 
-    {{-- <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">HOTEL STARBHAK</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active mx-3 text-white" aria-current="page" href="#home">Home</a>
-                    <a class="nav-link mx-3 text-white" href="#about">About</a>
-                    <a class="nav-link mx-3 text-white" href="#room">Rooms</a>
-                    <a class="nav-link mx-3 text-white" href="#hotel">Hotel Facility</a>
-                </div>
-            </div>
-        </div>
-    </nav> --}}
-
-    <div class="container-fluid bg-dark px-0">
+       <!-- Header Start -->
+       <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
                 <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
@@ -61,6 +44,8 @@
             </div>
         </div>
     </div>
+    <!-- Header End -->
+
 
     <section id="home">
       <div class="container">
@@ -278,6 +263,23 @@
             </div>
           </div>
       </div>
+
+         <!-- Footer Start -->
+         <div class="container-fluid bg-dark text-light footer wow fadeIn mt-5" data-wow-delay="0.1s" >
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-primary rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
+                            <p class="text-white mb-0">
+							 <a class="text-dark fw-medium" href="">Hotel Hebat
+							</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
   </section>
    
 

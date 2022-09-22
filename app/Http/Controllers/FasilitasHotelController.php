@@ -38,8 +38,9 @@ class FasilitasHotelController extends Controller
     {
         Fasilitas_Hotel::create($request->all());
 
-        return redirect()->route('Fasilitas-hotel.index')->with('success','Data Berhasil di Input');
+        return redirect('/fasilitas')->with('success', 'Data Berhasil Ditambahkan');
     }
+
 
     /**
      * Display the specified resource.
