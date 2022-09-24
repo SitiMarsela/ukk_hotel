@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\FasilitasHotelController;
 
@@ -18,25 +21,46 @@ use App\Http\Controllers\FasilitasHotelController;
 */
 
 Route::get('/', function () {
-    return view('starter');
+    return view('index');
 });
 
 
-Route::get('/home', function () {
-    return view('index');
+Route::get('/tampilanAdmin', function () {
+    return view('layout');
+});
+
+Route::get('/tampilanResepsionis', function () {
+    return view('Pemesanan.starter');
 });
 
 Route::get('/booking', function () {
     return view('booking');
 });
 
-// ========== RESEPSIONIS
-Route::get('/resepsionis', [ResepsionisController::class, 'index']);
-Route::get('/create-resepsionis', [ResepsionisController::class, 'create'])->name('create-resepsionis');
-Route::post('/simpan-resepsionis', [ResepsionisController::class, 'store'])->name('simpan-resepsionis');
-Route::delete('/delete-resep/{id}', [ResepsionisController::class, 'destroy']);
 
-// 
+// LOGIN
+Route::get('login', [AuthController::class, 'index'])->name('login');
+    Route::post('postlogin', [AuthController::class, 'postlogin'])->name('postlogin'); 
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::group(['middleware' => ['auth']], function () {
+        Route::group(['middleware' => ['login:admin']], function () {
+            Route::get('admin', [AdminController::class, 'index'])->name('admin',[
+                "title" => "Dashboardadmin"]);
+        });
+        Route::group(['middleware' => ['login:resepsionis']], function () {
+            Route::get('resepsionis', [ResepsionisController::class, 'index'])->name('resepsionis',[
+                "title" => "Dashboardresepsionis"]);
+        });
+    });
+    
+// ========== PEMESANAN
+Route::get('/pemesanan', [PemesananController::class, 'index']);
+Route::get('/create-pemesanan', [PemesananController::class, 'create'])->name('create-pemesanan');
+Route::post('/simpan-pemesanan', [PemesananController::class, 'store'])->name('simpan-pemesanan');
+Route::delete('/delete-pesan/{id}', [PemesananController::class, 'destroy']);
+
+// BOOKING
 Route::get('/booking', [BookingController::class, 'index']);
 Route::post('/save-booking', [BookingController::class, 'store'])->name('save-booking');
 

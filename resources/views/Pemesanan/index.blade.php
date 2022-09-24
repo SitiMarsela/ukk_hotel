@@ -14,7 +14,7 @@
                               {{ $message }}
                          </div>
                          @endif
-                         <a href="{{ route('create-resepsionis')}}" class="btn btn-info" style="margin-bottom: 20px">+</a>
+                         <a href="{{ route('create-pemesanan')}}" class="btn btn-info" style="margin-bottom: 20px">+</a>
 
                     <!-- table -->
                     
@@ -50,7 +50,7 @@
                                
    
                                <td>
-                                   <form action="{{ url('/delete-resep', $item->id)}}" method="POST">
+                                   <form action="{{ url('/delete-pesan', $item->id)}}" method="POST">
                                    @csrf
                                    @method('delete')
                                    <button class="btn btn-danger">Hapus</button>

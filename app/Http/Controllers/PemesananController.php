@@ -3,20 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pemesanan;
-use App\Models\Resepsionis;
 use Illuminate\Http\Request;
 
-class BookingController extends Controller
+class PemesananController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $resep = Pemesanan::all();
-        return view('booking',compact('resep'));
+        $data = Pemesanan::all();
+        return view('Pemesanan.index',compact('data'));
     }
 
     /**
@@ -26,7 +20,9 @@ class BookingController extends Controller
      */
     public function create()
     {
-        //
+        $datapesanan = Pemesanan::all();
+        
+        return view('booking',compact('datapesanan'));
     }
 
     /**
@@ -39,7 +35,7 @@ class BookingController extends Controller
     {
         Pemesanan::create($request->all());
 
-        return redirect('/booking')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect('/pemesanan')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -84,6 +80,8 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $resep = Pemesanan::findorfail($id);
+        $resep->delete();
+        return back()->with('destroy', 'Data Ke Destroy');
     }
 }

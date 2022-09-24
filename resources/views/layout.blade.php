@@ -309,28 +309,19 @@
             <div class="container">
                 <div class="card">
                     <div class="card-header">
-                      TAMU
-                    </div>
-                    <div class="card-body">
-                      <a href="/home" class="btn btn-primary">Masuk</a>
-                    </div>
-                </div>
-                <br>
-                <div class="card">
-                    <div class="card-header">
-                      RESEPSIONIS
-                    </div>
-                    <div class="card-body">
-                      <a href="/pemesanan" class="btn btn-primary">Masuk</a>
-                    </div>
-                </div>
-                <br>
-                <div class="card">
-                    <div class="card-header">
-                      ADMIN
+                      KAMAR
                     </div>
                     <div class="card-body">
                       <a href="/kamar" class="btn btn-primary">Masuk</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                      FASILITAS HOTEL
+                    </div>
+                    <div class="card-body">
+                      <a href="/fasilitas" class="btn btn-primary">Masuk</a>
                     </div>
                 </div>
                 

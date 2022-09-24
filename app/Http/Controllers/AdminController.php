@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ResepsionisController extends Controller
+class AdminController extends Controller
 {
     public function index(){
-        return view('Pemesanan.starter');
+        return view('layout');
     }
 }

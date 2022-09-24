@@ -7,7 +7,7 @@
           <div class="col-8">
                <div class="card">
                     <div class="card-body">
-                    <form action="{{ route('simpan-resepsionis') }}" method="POST" enctype= "multipart/form-data">
+                    <form action="{{ route('simpan-pemesanan') }}" method="POST" enctype= "multipart/form-data">
                     {{ csrf_field() }}
 
                     <div class="form-group">
