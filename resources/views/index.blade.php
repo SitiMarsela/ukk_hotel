@@ -73,14 +73,15 @@
                             <img src="./about5.jpg" class="d-block w-100">
                           </div>
                           <div class="carousel-item">
+                            <img src="./about6.jpg" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
                             <img src="./about7.jpg" class="d-block w-100">
                           </div>
                           <div class="carousel-item">
                             <img src="./about8.jpg" class="d-block w-100">
                           </div>
-                          <div class="carousel-item">
-                            <img src="./about6.jpg" class="d-block w-100">
-                          </div>
+                         
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -95,9 +96,8 @@
                 <div class="col-md-8 px-5">
                     <h5 class="fw-bold my-3"><span style="color:#0e1d72">ABOUT US</span></h5>
                     <h1 class="fw-bold my-3">WELCOME TO <span style="color:#0e1d72">HOTEL</span></h1>
-                    <h1 class="fw-bold my-3"><span style="color:#0e1d72">HEBAT</span></h1>
-                    <p class="my-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
-                        sed stet lorem sit clita duo justo magna dolore erat amet.  sed stet lorem sit clita duo justo magna dolore erat amet.  sed stet lorem sit clita duo justo magna dolore erat amet.  sed stet lorem sit clita duo justo magna dolore erat amet.
+                    <h1 class="fw-bold my-3"><span style="color:#0e1d72">STARBHAK</span></h1>
+                    <p class="my-5">Hotel STARBHAK merupakan hotel satu-satunya di Jakarta yang menawarkan kebun tropis rindang seluas 9 hektar untuk para tamu. Hotel juga berkomitmen ambil bagian dalam program konservasi ramah lingkungan dan baru-baru ini mendapat piagam dari TUV Rheinland Group (Germany), dari Kementerian Pariwisata dan Ekonomi Kreatif Indonesis sebagai.
                     </p>
                 </div>
             </div>
@@ -109,8 +109,8 @@
 
     <section id="room">
         <div class="container my-5">
-            <h5 class="fw-bold my-2 text-center"><span style="color:#0e1d72">OUR ROOMS</span></h5>
-            <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">ROOMS</span></h1>
+            <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#0e1d72">OUR ROOMS</span></h5>
+            {{-- <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">ROOMS</span></h1> --}}
 
 
             <div class="row g-4">
@@ -218,8 +218,8 @@
 
     <section id="hotel">
       <div class="container my-5">
-          <h5 class="fw-bold my-2 text-center"><span style="color:#0e1d72">FACILITY HOTEL</span></h5>
-          <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">HOTEL</span></h1>
+          <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#0e1d72">FACILITY HOTEL</span></h5>
+          {{-- <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">HOTEL</span></h1> --}}
           <div class="row g-4">
             <div class="col-lg-4 col-md-6 my-5">
               <div class="hotel-item shadow rounded overflow-hidden">
