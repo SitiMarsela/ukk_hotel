@@ -46,7 +46,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <a href="{{url('/home')}}" type="submit" class="btn btn-warning mb-3">Kembali</a>
                 </div>
             </div>
         </div>

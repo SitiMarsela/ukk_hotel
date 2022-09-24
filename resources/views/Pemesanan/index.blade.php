@@ -8,13 +8,12 @@
           <div class="col-12">
                <div class="card">
                     <div class="card-body">
-                         <h1 class="text-center">Resepsionis</h1>
+                         <h1 class="text-center">Data Pemesanan</h1>
                          @if ($message = Session::get('success'))
                          <div class= "alert alert-success" role="alert">
                               {{ $message }}
                          </div>
                          @endif
-                         <a href="{{ route('create-pemesanan')}}" class="btn btn-info" style="margin-bottom: 20px">+</a>
 
                     <!-- table -->
                     
@@ -29,7 +28,8 @@
                                <th scope="col">Nama Tamu</th>
                                <th scope="col">Tgl. Check In</th>
                                <th scope="col">Tgl. Check Out</th>
-                               <th scope="col">Tipe kam</th>
+                               <th scope="col">Tipe kamar</th>
+                               <th scope="col">Jumlah Kamar</th>
                                <th scope="col">Option</th>
    
                              </tr>
@@ -47,6 +47,7 @@
                                <td>{{ $item->tgl_checkin }}</td>
                                <td>{{ $item->tgl_checkout }}</td>
                                <td>{{ $item->tipe_kamar }}</td>
+                               <td>{{ $item->jumlah }}</td>
                                
    
                                <td>

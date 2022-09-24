@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Login;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KamarController;
@@ -38,20 +39,20 @@ Route::get('/booking', function () {
 });
 
 
-// LOGIN
-Route::get('login', [AuthController::class, 'index'])->name('login');
-    Route::post('postlogin', [AuthController::class, 'postlogin'])->name('postlogin'); 
-    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-
-    Route::group(['middleware' => ['auth']], function () {
-        Route::group(['middleware' => ['login:admin']], function () {
-            Route::get('admin', [AdminController::class, 'index'])->name('admin',[
-                "title" => "Dashboardadmin"]);
-        });
-        Route::group(['middleware' => ['login:resepsionis']], function () {
-            Route::get('resepsionis', [ResepsionisController::class, 'index'])->name('resepsionis',[
-                "title" => "Dashboardresepsionis"]);
-        });
+// LOGIN 
+Route::get('login', [AuthController::class, 'index'])->name('login'); 
+    Route::post('postlogin', [AuthController::class, 'postlogin'])->name('postlogin');  
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout'); 
+ 
+    Route::group(['middleware' => ['auth']], function () { 
+        Route::group(['middleware' => ['cek_login:admin']], function () { 
+            Route::get('admin', [AdminController::class, 'index'])->name('admin',[ 
+                "title" => "Dashboardadmin"]); 
+        }); 
+        Route::group(['middleware' => ['cek_login:resepsionis']], function () { 
+            Route::get('resepsionis', [ResepsionisController::class, 'index'])->name('resepsionis',[ 
+                "title" => "Dashboardresepsionis"]); 
+        }); 
     });
     
 // ========== PEMESANAN
@@ -80,7 +81,7 @@ Route::get('/edit-fasilitas/{id}', [FasilitasHotelController::class, 'edit']);
 Route::put('/update-fasilitas/{id}', [FasilitasHotelController::class, 'update'])->name('update-fasilitas');
 Route::delete('/delete-fasilitas/{id}', [FasilitasHotelController::class, 'destroy']);
 
-// DETAIL
+// RESEPSIONIS
 Route::get('/detail', [ResepsionisController::class, 'index']);
 Route::get('/create-resepsionis', [ResepsionisController::class, 'create'])->name('create-resepsionis');
 Route::post('/simpan-resepsionis', [ResepsionisController::class, 'store'])->name('simpan-resepsionis');

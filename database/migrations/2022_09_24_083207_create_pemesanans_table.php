@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string('telp');
             $table->string('nama_tamu');
             $table->date('tgl_checkin');
-            $table->date('tgl_checout');
+            $table->date('tgl_checkout');
             $table->integer('tipe_kamar');
+            $table->integer('jumlah');
             $table->timestamps();
         });
     }

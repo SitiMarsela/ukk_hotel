@@ -144,7 +144,7 @@
                                             <label for="checkout">Check Out</label>
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-6">
                                           <div class="form-floating">
                                             <select class="form-select" id="type_kamar" name="tipe_kamar">
                                               <option value="1">Indonesia
@@ -157,7 +157,12 @@
                                             <label for="type_kamar">Type Kamar</label>
                                           </div>
                                         </div>
-                                    <div class="col-12">
+                                        <div class="col-md-6">
+                                            <div class="form-floating" data-target-input="nearest">
+                                                <input type="text" class="form-control" name="jumlah" id="jumlah" placeholder="Jumlah" />
+                                                <label for="jumlah">Jumlah</label>
+                                            </div>
+                                        </div>
                                         <button class="btn btn-dark w-100 py-3" type="submit">Book Now</button>
                                     </div>
                                 </div>
@@ -194,7 +199,8 @@
                                       <th scope="col">Nama Tamu</th>
                                       <th scope="col">Tgl. Check In</th>
                                       <th scope="col">Tgl. Check Out</th>
-                                      <th scope="col">Tipe kam</th>
+                                      <th scope="col">Tipe kamar</th>
+                                      <th scope="col">Jumlah Kamar</th>
           
                                     </tr>
                                   </thead>
@@ -211,6 +217,7 @@
                                       <td>{{ $item->tgl_checkin }}</td>
                                       <td>{{ $item->tgl_checkout }}</td>
                                       <td>{{ $item->tipe_kamar }}</td>
+                                      <td>{{ $item->jumlah }}</td>
                                     
                                     </tr>
                                     @endforeach
