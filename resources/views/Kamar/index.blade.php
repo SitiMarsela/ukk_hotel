@@ -22,6 +22,7 @@
                             <tr scope="row">
                                 <th>No</th>
                                 <th>Tipe Kamar</th>
+                                <th>Nama Fasilitas</th>
                                 <th>Jumlah Kamar</th>
                                 <th>Aksi</th>
                             </tr>
@@ -31,6 +32,7 @@
                             <tr>
                                 <th scope="row">{{$loop->iteration}}</th>
                                 <td>{{$item->tipe_kamar}}</td>
+                                <td>{{$item->nama_fasilitas}}</td>
                                 <td>{{$item->jumlah_kamar}}</td>
                                 <td>
                                     <a href="{{ url('edit-kamar', $item->id) }}" class="btn btn-warning">Edit</a>

@@ -44,11 +44,13 @@ class KamarController extends Controller
     
         $kamar = Kamar::create([
         'tipe_kamar'     => $request->tipe_kamar,
+        'nama_fasilitas' => $request->nama_fasilitas,
         'jumlah_kamar'   => $request->jumlah_kamar,
     ]);
 
     $this->validate($request, [
         'tipe_kamar' => 'required',
+        'nama_fasilitas' => 'required',
         'jumlah_kamar' => 'required',
     ]);
     
@@ -95,6 +97,7 @@ class KamarController extends Controller
         
         $this->validate($request, [
             'tipe_kamar' => 'required',
+            'nama_fasilitas' => 'required',
             'jumlah_kamar' => 'required',
         ]);
 

@@ -11,22 +11,38 @@
                     {{ csrf_field() }}
 
                     <div class="form-group">
+                        <label for="exampleFormControlInput1">Nama Pemesan :</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama Pemesan" name="nama_pemesan">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email :</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Email Anda" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">No Telepon :</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan No Telepon" name="telp">
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleFormControlInput1">Nama Tamu :</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama Tamu" name="nama_tamu">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">No HP :</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan No HP" name="no_telp">
-                    </div>
+                   
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tanggal Cek In :</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1"  name="tgl_cekin">
+                        <input type="date" class="form-control" id="exampleFormControlInput1"  name="tgl_checkin">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tanggal Cek Out :</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1"  name="tgl_cekout">
+                        <input type="date" class="form-control" id="exampleFormControlInput1"  name="tgl_chekout">
                     </div>
 
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Tipe Kamar :</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan " name="tipe_kamar">
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
 
                       </div>

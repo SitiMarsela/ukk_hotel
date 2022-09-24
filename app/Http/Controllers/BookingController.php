@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fasilitas_hotel;
+use App\Models\Resepsionis;
 use Illuminate\Http\Request;
 
-class FasilitasHotelController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class FasilitasHotelController extends Controller
      */
     public function index()
     {
-        $datahotel = Fasilitas_Hotel::latest()->paginate(5);
-        return view ('Fasilitas-hotel.index',compact('datahotel'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $resep = Resepsionis::all();
+        return view('booking',compact('resep'));
     }
 
     /**
@@ -25,7 +25,7 @@ class FasilitasHotelController extends Controller
      */
     public function create()
     {
-        return view('Fasilitas-hotel.create');
+        //
     }
 
     /**
@@ -36,11 +36,10 @@ class FasilitasHotelController extends Controller
      */
     public function store(Request $request)
     {
-        Fasilitas_Hotel::create($request->all());
+        Resepsionis::create($request->all());
 
-        return redirect('/fasilitas')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect('/booking')->with('success', 'Data Berhasil Ditambahkan');
     }
-
 
     /**
      * Display the specified resource.
@@ -61,8 +60,7 @@ class FasilitasHotelController extends Controller
      */
     public function edit($id)
     {
-        $datahotel =  Fasilitas_Hotel::find($id);
-        return view('Fasilitas-hotel.edit',compact('datahotel'));
+        //
     }
 
     /**
@@ -72,11 +70,9 @@ class FasilitasHotelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Fasilitas_hotel $hotel)
+    public function update(Request $request, $id)
     {
-        $hotel->update($request->all());
-    
-        return redirect('/fasilitas')->with('success', 'Data Berhasil Di Update');
+        //
     }
 
     /**

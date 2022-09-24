@@ -25,7 +25,9 @@ class ResepsionisController extends Controller
      */
     public function create()
     {
-       return view('Resepsionis.create');
+        $datapesanan = Resepsionis::all();
+        
+        return view('booking',compact('datapesanan'));
     }
 
     /**
@@ -36,13 +38,9 @@ class ResepsionisController extends Controller
      */
     public function store(Request $request)
     {
-     Resepsionis::create([
-        'nama_tamu' => $request->nama_tamu,
-        'tgl_cekin' => $request->tgl_cekin,
-        'tgl_cekout' => $request->tgl_cekout,
-        ]);
+        Resepsionis::create($request->all());
 
-        return redirect('/resepsionis');
+        return redirect('/resepsionis')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**

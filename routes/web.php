@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KamarController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\FasilitasHotelController;
 
@@ -33,6 +34,11 @@ Route::get('/booking', function () {
 Route::get('/resepsionis', [ResepsionisController::class, 'index']);
 Route::get('/create-resepsionis', [ResepsionisController::class, 'create'])->name('create-resepsionis');
 Route::post('/simpan-resepsionis', [ResepsionisController::class, 'store'])->name('simpan-resepsionis');
+Route::delete('/delete-resep/{id}', [ResepsionisController::class, 'destroy']);
+
+// 
+Route::get('/booking', [BookingController::class, 'index']);
+Route::post('/save-booking', [BookingController::class, 'store'])->name('save-booking');
 
 // KAMAR
 Route::get('/kamar', [KamarController::class, 'index']);
@@ -49,3 +55,8 @@ Route::post('/save-fasilitas', [FasilitasHotelController::class, 'store'])->name
 Route::get('/edit-fasilitas/{id}', [FasilitasHotelController::class, 'edit']);
 Route::put('/update-fasilitas/{id}', [FasilitasHotelController::class, 'update'])->name('update-fasilitas');
 Route::delete('/delete-fasilitas/{id}', [FasilitasHotelController::class, 'destroy']);
+
+// DETAIL
+Route::get('/detail', [ResepsionisController::class, 'index']);
+Route::get('/create-resepsionis', [ResepsionisController::class, 'create'])->name('create-resepsionis');
+Route::post('/simpan-resepsionis', [ResepsionisController::class, 'store'])->name('simpan-resepsionis');

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hotel Hebat</title>
+    <title>Hotel STARBHAK</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,12 +42,12 @@
         </div>
         <!-- Spinner End -->
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-dark px-0">
+         <!-- Header Start -->
+         <div class="container-fluid bg-dark px-0 py-3">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary text-uppercase">Hotel Hebat</h1>
+                        <h2 class="m-0 text-white text-uppercase">Hotel Starbhak</h2>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -58,25 +58,24 @@
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">Hotel Hebat</h1>
+                            <h1 class="m-0 text-primary text-uppercase">Hotel Starbhak</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-between ms-auto" id="navbarCollapse">
+                        {{-- <div class="collapse navbar-collapse justify-content-between ms-auto" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 ms-auto me-5">
                                 <a href="home#home" class="nav-item nav-link active">Home</a>
                                 <a href="home#about" class="nav-item nav-link">About Us</a>
                                 <a href="home#room" class="nav-item nav-link">Rooms</a>
                                 <a href="home#hotel" class="nav-item nav-link">Hotel Facility</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Header End -->
-
 
       
 
@@ -85,10 +84,9 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Room Booking</h6>
-                    <h1 class="mb-5">Book A <span class="text-primary text-uppercase">Luxury Room</span></h1>
+                    <h6 class="section-title text-center text-blue text-uppercase">Room Booking</h6>
                 </div>
-                <div class="row g-5">
+                <div class="row g-5" style="margin-top: 10px">
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
@@ -107,13 +105,13 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form action="{{ route('simpan-resepsionis') }}" method="POST">
+                            <form action="{{ route('save-booking') }}" method="POST">
                                 @csrf
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="nama_pemesan" placeholder="Nama Tamu">
-                                            <label for="nama_tamu">Nama Pemesana</label>
+                                            <input type="text" class="form-control" name="nama_pemesan" placeholder="nama_pemesan">
+                                            <label for="nama_pemesan">Nama Pemesana</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -124,8 +122,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="no_telp" placeholder="Nama Tamu">
-                                            <label for="nama_tamu">No Telpon</label>
+                                            <input type="text" class="form-control" name="telp" placeholder="telp">
+                                            <label for="telp">No Telpon</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -148,7 +146,7 @@
                                     </div>
                                     <div class="col-12">
                                           <div class="form-floating">
-                                            <select class="form-select" id="type_kamar" name="kamar_id">
+                                            <select class="form-select" id="type_kamar" name="tipe_kamar">
                                               <option value="1">Indonesia
                                                 Standard Double</option>
                                               <option value="2">Indonesia
@@ -158,27 +156,9 @@
                                             </select>
                                             <label for="type_kamar">Type Kamar</label>
                                           </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="jumlah" name="jumlah">
-                                                <option value="1">1 Kamar</option>
-                                                <option value="2">2 Kamar</option>
-                                                <option value="3">3 Kamar</option>
-                                            </select>
-                                            <label for="jumlah">Jumlah</label>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="status" name="status">
-                                              <option value="booking">Room Booking</option>
-                                            </select>
-                                            <label for="status">Status pesanan</label>
-                                          </div>
-                                    </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                        <button class="btn btn-dark w-100 py-3" type="submit">Book Now</button>
                                     </div>
                                 </div>
                             </form>
@@ -189,6 +169,59 @@
         </div>
         <!-- Booking End -->
 
+        <div class="container">
+            <div class="row justify-content-center">
+                 <div class="col-12">
+                      <div class="card">
+                           <div class="card-body">
+                                <h1 class="text-center">DETAIL PEMESANAN</h1>
+                                @if ($message = Session::get('success'))
+                                <div class= "alert alert-success" role="alert">
+                                     {{ $message }}
+                                </div>
+                                @endif
+       
+                           <!-- table -->
+                           
+                           <table class="table">
+                                <thead  class="">
+                                  <tr>
+                                      <th scope="col">#</th>
+                                      
+                                      <th scope="col">Nama Pemesanan</th>
+                                      <th scope="col">Email</th>
+                                      <th scope="col">Telepon</th>
+                                      <th scope="col">Nama Tamu</th>
+                                      <th scope="col">Tgl. Check In</th>
+                                      <th scope="col">Tgl. Check Out</th>
+                                      <th scope="col">Tipe kam</th>
+          
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach ($resep as $item)
+                              
+                                    <tr>
+                                      <th scope="row">{{$loop->iteration}}</th>
+                                      
+                                      <td>{{ $item->nama_pemesan }}</td>
+                                      <td>{{ $item->email }}</td>
+                                      <td>{{ $item->telp }}</td>
+                                      <td>{{ $item->nama_tamu }}</td>
+                                      <td>{{ $item->tgl_checkin }}</td>
+                                      <td>{{ $item->tgl_checkout }}</td>
+                                      <td>{{ $item->tipe_kamar }}</td>
+                                    
+                                    </tr>
+                                    @endforeach
+                                  </tbody>
+                              </table>
+                            {{-- <a href="{{url('/home')}}" type="submit" class="btn btn-warning mb-3">Kembali</a> --}}
+                           </div>
+                      </div>
+                 </div>
+            </div>
+       </div>
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer wow fadeIn mt-5" data-wow-delay="0.1s" >

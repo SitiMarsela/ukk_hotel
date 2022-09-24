@@ -62,7 +62,7 @@
             </li>
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="/fasilitashotel">
+                <a class="nav-link" href="/fasilitas">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Data Fasilitas Hotel</span></a>
             </li>

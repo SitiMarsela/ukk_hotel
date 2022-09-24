@@ -20,6 +20,14 @@
                     </div>
 
                     <div class="mb-3">
+                    <label class="form-label">Nama Fasilitas</label>
+                    <input type="text" class="form-control" name="nama_fasilitas">
+                    @error('nama_fasilitas')
+                    <div class="text-info">{{ $message }}</div>
+                    @enderror
+                    </div>
+
+                    <div class="mb-3">
                     <label class="form-label">Jumlah Kamar</label>
                     <input type="text" class="form-control" name="jumlah_kamar">
                     @error('jumlah_kamar')

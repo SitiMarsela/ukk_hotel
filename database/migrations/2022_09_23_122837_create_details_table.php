@@ -13,15 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('resepsionis', function (Blueprint $table) {
+        Schema::create('details', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_pemesan');
-            $table->string('email');
-            $table->string('telp');
-            $table->string('nama_tamu');
-            $table->date('tgl_checkin');
-            $table->date('tgl_checout');
-            $table->integer('tipe_kamar');
             $table->timestamps();
         });
     }
@@ -33,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resepsionis');
+        Schema::dropIfExists('details');
     }
 };

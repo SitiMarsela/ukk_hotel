@@ -23,10 +23,13 @@
                            <tr>
                                <th scope="col">#</th>
                                
+                               <th scope="col">Nama Pemesanan</th>
+                               <th scope="col">Email</th>
+                               <th scope="col">Telepon</th>
                                <th scope="col">Nama Tamu</th>
-                               <th scope="col">No HP</th>
                                <th scope="col">Tgl. Check In</th>
                                <th scope="col">Tgl. Check Out</th>
+                               <th scope="col">Tipe kam</th>
                                <th scope="col">Option</th>
    
                              </tr>
@@ -37,13 +40,17 @@
                              <tr>
                                <th scope="row">{{$loop->iteration}}</th>
                                
+                               <td>{{ $item->nama_pemesan }}</td>
+                               <td>{{ $item->email }}</td>
+                               <td>{{ $item->telp }}</td>
                                <td>{{ $item->nama_tamu }}</td>
-                               <td>{{ $item->tgl_cekin }}</td>
-                               <td>{{ $item->tgl_cekout }}</td>
+                               <td>{{ $item->tgl_checkin }}</td>
+                               <td>{{ $item->tgl_checkout }}</td>
+                               <td>{{ $item->tipe_kamar }}</td>
                                
    
                                <td>
-                                   <form action="{{ url('hapus', $item->id)}}" method="POST">
+                                   <form action="{{ url('/delete-resep', $item->id)}}" method="POST">
                                    @csrf
                                    @method('delete')
                                    <button class="btn btn-danger">Hapus</button>

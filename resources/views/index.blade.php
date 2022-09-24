@@ -12,11 +12,11 @@
   <body>
 
        <!-- Header Start -->
-       <div class="container-fluid bg-dark px-0">
+       <div class="container-fluid px-0 py-3" style="background-color: #1d2031">
         <div class="row gx-0">
-            <div class="col-lg-3 bg-dark d-none d-lg-block">
+            <div class="col-lg-3 d-none d-lg-block">
                 <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 text-primary text-uppercase">Hotel Hebat</h1>
+                    <h2 class="m-0 text-white text-uppercase fw-bold">Hotel Starbhak</h2>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -25,9 +25,9 @@
                       
                     </div>
                 </div>
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 text-primary text-uppercase">Hotel Hebat</h1>
+                        <h1 class="m-0 text-primary text-uppercase">Hotel Starbhak</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -50,9 +50,8 @@
     <section id="home">
       <div class="container">
         <div class="latar">
-          <h5 class="fw-bold">LUXURY LIVING.</h5>
-          <h1 class="py-2 fw-bold text-uppercase">Discover a Brand <br> Hotel Hebat</h1>
-          <a class="btn btn-primary fw-bold my-5 py-3 px-5" href="/booking">BOOKING SEKARANG</a>
+          <h1 class="py-2 fw-bold text-uppercase">HOTEL STARBHAK</h1>
+          <a class="btn btn-dark fw-bold my-5 py-3 px-5" href="/booking">BOOKING SEKARANG</a>
       </div>
       </div>
     </section>
@@ -94,11 +93,12 @@
                       </div>
                 </div>
                 <div class="col-md-8 px-5">
-                    <h5 class="fw-bold my-3"><span style="color:#FEA116">ABOUT US</span></h5>
-                    <h1 class="fw-bold my-3">WELCOME TO <span style="color:#FEA116">HOTEL</span></h1>
-                    <h1 class="fw-bold my-3"><span style="color:#FEA116">HEBAT</span></h1>
-                    <p class="my-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
-                    <a class="btn btn-primary py-3 px-5" href="">Explore More</a>
+                    <h5 class="fw-bold my-3"><span style="color:#0e1d72">ABOUT US</span></h5>
+                    <h1 class="fw-bold my-3">WELCOME TO <span style="color:#0e1d72">HOTEL</span></h1>
+                    <h1 class="fw-bold my-3"><span style="color:#0e1d72">HEBAT</span></h1>
+                    <p class="my-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
+                        sed stet lorem sit clita duo justo magna dolore erat amet.  sed stet lorem sit clita duo justo magna dolore erat amet.  sed stet lorem sit clita duo justo magna dolore erat amet.  sed stet lorem sit clita duo justo magna dolore erat amet.
+                    </p>
                 </div>
             </div>
         </div>
@@ -109,8 +109,8 @@
 
     <section id="room">
         <div class="container my-5">
-            <h5 class="fw-bold my-2 text-center"><span style="color:#FEA116">OUR ROOMS</span></h5>
-            <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#FEA116">ROOMS</span></h1>
+            <h5 class="fw-bold my-2 text-center"><span style="color:#0e1d72">OUR ROOMS</span></h5>
+            <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">ROOMS</span></h1>
 
 
             <div class="row g-4">
@@ -123,19 +123,19 @@
                         <div class="d-flex justify-content-between mb-3">
                             <h5 class="mb-0 fw-bold">Indonesia <br>
                               Standard Double</h5>
-                            <div class="rate">
+                            {{-- <div class="rate">
                                 <small class="fa fa-star"></small>
                                 <small class="fa fa-star"></small>
                                 <small class="fa fa-star"></small>
                                 <small class="fa fa-star"></small>
                                 <small class="fa fa-star"></small>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="d-flex mb-3">
-                            <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
+                            {{-- <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
                             <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
 
-                            <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small>
+                            <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small> --}}
 
                         </div>
                         <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV, Bath, Wifi.</p>
@@ -156,19 +156,19 @@
                           <h5 class="mb-0 fw-bold">Indonesia <br>
                             Suite Family
                             </h5>
-                          <div class="rate">
+                          {{-- <div class="rate">
                               <small class="fa fa-star"></small>
                               <small class="fa fa-star"></small>
                               <small class="fa fa-star"></small>
                               <small class="fa fa-star"></small>
                               <small class="fa fa-star"></small>
-                          </div>
+                          </div> --}}
                       </div>
                       <div class="d-flex mb-3">
-                          <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
+                          {{-- <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
                           <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
 
-                          <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small>
+                          <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small> --}}
 
                       </div>
                       <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV, Bath, Wifi.</p>
@@ -188,20 +188,20 @@
                     <div class="d-flex justify-content-between mb-3">
                         <h5 class="mb-0 fw-bold">Indonesia <br>
                           Deluxe Double</h5>
-                        <div class="rate">
+                        {{-- <div class="rate">
                             <small class="fa fa-star"></small>
                             <small class="fa fa-star"></small>
                             <small class="fa fa-star"></small>
                             <small class="fa fa-star"></small>
                             <small class="fa fa-star"></small>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="d-flex mb-3">
-                        <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
+                        {{-- <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
                         <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
 
                        
-                        <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small>
+                        <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small> --}}
 
                     </div>
                     <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV + Netflix, Bath, Wifi.</p>
@@ -218,8 +218,8 @@
 
     <section id="hotel">
       <div class="container my-5">
-          <h5 class="fw-bold my-2 text-center"><span style="color:#FEA116">FACILITY HOTEL</span></h5>
-          <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#FEA116">HOTEL</span></h1>
+          <h5 class="fw-bold my-2 text-center"><span style="color:#0e1d72">FACILITY HOTEL</span></h5>
+          <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">HOTEL</span></h1>
           <div class="row g-4">
             <div class="col-lg-4 col-md-6 my-5">
               <div class="hotel-item shadow rounded overflow-hidden">
