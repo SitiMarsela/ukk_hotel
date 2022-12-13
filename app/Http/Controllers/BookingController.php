@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kamar;
 use App\Models\Pemesanan;
 use App\Models\Resepsionis;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class BookingController extends Controller
     public function index()
     {
         $resep = Pemesanan::all();
-        return view('booking',compact('resep'));
+        $datapesanan = Kamar::all();
+        return view('booking',compact('resep' ,'datapesanan'));
     }
 
     /**

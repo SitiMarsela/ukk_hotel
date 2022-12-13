@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -43,11 +44,11 @@
         <!-- Spinner End -->
 
          <!-- Header Start -->
-         <div class="container-fluid bg-dark px-0 py-3">
+         <div class="container-fluid px-0 py-3" style="background-color: #1d2031">
             <div class="row gx-0">
-                <div class="col-lg-3 bg-dark d-none d-lg-block">
+                <div class="col-lg-3 d-none d-lg-block">
                     <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h2 class="m-0 text-white text-uppercase">Hotel Starbhak</h2>
+                        <h2 class="m-0 text-white text-uppercase fw-bold">Hotel Starbhak</h2>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -63,14 +64,15 @@
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        {{-- <div class="collapse navbar-collapse justify-content-between ms-auto" id="navbarCollapse">
+                        <div class="collapse navbar-collapse justify-content-between ms-auto" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 ms-auto me-5">
-                                <a href="home#home" class="nav-item nav-link active">Home</a>
-                                <a href="home#about" class="nav-item nav-link">About Us</a>
+                                <a href="/" class="nav-item nav-link">Home</a>
+                                <a href="about" class="nav-item nav-link">About Us</a>
                                 <a href="home#room" class="nav-item nav-link">Rooms</a>
                                 <a href="home#hotel" class="nav-item nav-link">Hotel Facility</a>
+                                <a href="/booking" class="nav-item nav-link active">Booking Room</a>
                             </div>
-                        </div> --}}
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -83,27 +85,45 @@
         <!-- Booking Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-blue text-uppercase">Room Booking</h6>
+                <div class="text-center wow" data-wow-delay="0.1s">
+                    <h2 class="py-2 fw-bold text-uppercase" style="color: orange">ROOM BOOKING</h2>
                 </div>
-                <div class="row g-5" style="margin-top: 10px">
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about5.jpg" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about6.jpg">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about7.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about8.jpg">
-                            </div>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./about5.jpg" class="d-block w-100">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./about6.jpg" class="d-block w-100">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./about7.jpg" class="d-block w-100">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./about8.jpg" class="d-block w-100">
+                                  </div>
+                                 
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-7" style="margin-left: 80px">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <form action="{{ route('save-booking') }}" method="POST">
                                 @csrf
@@ -146,15 +166,14 @@
                                     </div>
                                     <div class="col-6">
                                           <div class="form-floating">
-                                            <select class="form-select" id="type_kamar" name="tipe_kamar">
-                                              <option value="1">Indonesia
-                                                Standard Double</option>
-                                              <option value="2">Indonesia
-                                                Suite Family</option>
-                                              <option value="3">Indonesia
-                                                Deluxe Double</option>
+                                            <select class=" form-select form-control" id=" " name="tipe_kamar">
+                                              <option selected>Pilih Tipe Kamar</option>
+                                              @foreach ($datapesanan as $item)
+                                                  <option value="{{ $item->tipe_kamar }}">
+                                                    {{ $item->tipe_kamar }}</option>
+                                              @endforeach
                                             </select>
-                                            <label for="type_kamar">Type Kamar</label>
+                                            <label for="tipe_kamar">Tipe Kamar</label>
                                           </div>
                                         </div>
                                         <div class="col-md-6">
@@ -163,7 +182,8 @@
                                                 <label for="jumlah">Jumlah</label>
                                             </div>
                                         </div>
-                                        <button class="btn btn-dark w-100 py-3" type="submit">Book Now</button>
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                        
                                     </div>
                                 </div>
                             </form>
@@ -174,12 +194,12 @@
         </div>
         <!-- Booking End -->
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                  <div class="col-12">
-                      <div class="card">
+                      <div class="card" style="margin-top: 30px" >
                            <div class="card-body">
-                                <h1 class="text-center">DETAIL PEMESANAN</h1>
+                                <h1 class="text-center pb-5" style="color: orange">DETAIL PEMESANAN</h1>
                                 @if ($message = Session::get('success'))
                                 <div class= "alert alert-success" role="alert">
                                      {{ $message }}
@@ -189,7 +209,7 @@
                            <!-- table -->
                            
                            <table class="table">
-                                <thead  class="">
+                                <thead  class="" style="align-content: center">
                                   <tr>
                                       <th scope="col">#</th>
                                       
@@ -213,11 +233,12 @@
                                       <td>{{ $item->nama_pemesan }}</td>
                                       <td>{{ $item->email }}</td>
                                       <td>{{ $item->telp }}</td>
-                                      <td>{{ $item->nama_tamu }}</td>
-                                      <td>{{ $item->tgl_checkin }}</td>
-                                      <td>{{ $item->tgl_checkout }}</td>
-                                      <td>{{ $item->tipe_kamar }}</td>
-                                      <td>{{ $item->jumlah }}</td>
+                                     <td>{{ $item->nama_tamu }}</td>
+                                     <td>{{ $item->tgl_checkin }}</td>
+                                     <td>{{ $item->tgl_checkout }}</td>
+                                     <td>{{ $item->tipe_kamar }}</td>
+                                    <td>{{ $item->jumlah }}</td>
+                               
                                     
                                     </tr>
                                     @endforeach

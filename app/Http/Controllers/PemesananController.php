@@ -9,7 +9,7 @@ class PemesananController extends Controller
 {
     public function index()
     {
-        $data = Pemesanan::all();
+        $data = Pemesanan::with('kamars')->paginate(2);
         return view('Pemesanan.index',compact('data'));
     }
 

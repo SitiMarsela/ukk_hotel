@@ -11,4 +11,9 @@ class Kamar extends Model
     protected $table = 'kamars';
     protected $primaryKey = 'id';
     protected $guarded = [];
+
+    public function pemesanans()
+    {
+        return $this->hasMany(Pemesanan::class);
+    }
 }

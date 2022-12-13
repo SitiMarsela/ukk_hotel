@@ -15,8 +15,10 @@ return new class extends Migration
     public function up()
     {
         DB::unprepared('
-        CREATE TRIGGER pesan AFTER INSERT ON pemesanans FOR EACH ROW BEGIN   
-        UPDATE kamars SET jumlah_kamar = jumlah_kamar - new.jumlah WHERE id = new.id; END ');
+        CREATE TRIGGER pesan AFTER INSERT ON pemesanans FOR EACH ROW 
+        BEGIN   
+        UPDATE kamars SET jumlah_kamar = jumlah_kamar - NEW.jumlah WHERE id = NEW.id; 
+        END ');
     }
 
     /**
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trigger');
+        DB::unprepared('DROP TRIGGER `pesan`');
     }
 };

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('nama_tamu');
             $table->date('tgl_checkin');
             $table->date('tgl_checkout');
-            $table->integer('tipe_kamar');
+            $table->string('tipe_kamar');
             $table->integer('jumlah');
             $table->timestamps();
         });

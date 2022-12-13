@@ -8,50 +8,54 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
   <body>
 
-       <!-- Header Start -->
-       <div class="container-fluid px-0 py-3" style="background-color: #1d2031">
-        <div class="row gx-0">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h2 class="m-0 text-white text-uppercase fw-bold">Hotel Starbhak</h2>
-                </a>
-            </div>
-            <div class="col-lg-9">
-                <div class="row gx-0 bg-white d-none d-lg-flex">
-                    <div class="col-lg-7 px-5 text-start">
-                      
-                    </div>
-                </div>
-                <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 text-primary text-uppercase">Hotel Starbhak</h1>
+    <div class="container-xxl bg-white p-0">
+
+         <!-- Header Start -->
+         <div class="container-fluid px-0 py-3" style="background-color: #1d2031">
+            <div class="row gx-0">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <h2 class="m-0 text-white text-uppercase fw-bold">Hotel Starbhak</h2>
                     </a>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between ms-auto" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0 ms-auto me-5">
-                            <a href="home#home" class="nav-item nav-link active">Home</a>
-                            <a href="home#about" class="nav-item nav-link">About Us</a>
-                            <a href="home#room" class="nav-item nav-link">Rooms</a>
-                            <a href="home#hotel" class="nav-item nav-link">Hotel Facility</a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                        <div class="col-lg-7 px-5 text-start">
+                          
                         </div>
                     </div>
-                </nav>
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase">Hotel Starbhak</h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between ms-auto" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0 ms-auto me-5">
+                                <a href="home#home" class="nav-item nav-link active">Home</a>
+                                <a href="home#about" class="nav-item nav-link">About Us</a>
+                                <a href="home#room" class="nav-item nav-link">Rooms</a>
+                                <a href="home#hotel" class="nav-item nav-link">Hotel Facility</a>
+                                <a href="/booking" class="nav-item nav-link">Booking Room</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+        <!-- Header End -->
 
 
     <section id="home">
       <div class="container">
         <div class="latar">
           <h1 class="py-2 fw-bold text-uppercase">HOTEL STARBHAK</h1>
-          <a class="btn btn-dark fw-bold my-5 py-3 px-5" href="/booking">BOOKING SEKARANG</a>
+          <a class="btn btn-primary fw-bold my-5 py-3 px-5" href="/booking">BOOKING SEKARANG</a>
       </div>
       </div>
     </section>
@@ -94,9 +98,9 @@
                       </div>
                 </div>
                 <div class="col-md-8 px-5">
-                    <h5 class="fw-bold my-3"><span style="color:#0e1d72">ABOUT US</span></h5>
-                    <h1 class="fw-bold my-3">WELCOME TO <span style="color:#0e1d72">HOTEL</span></h1>
-                    <h1 class="fw-bold my-3"><span style="color:#0e1d72">STARBHAK</span></h1>
+                    <h5 class="fw-bold my-3"><span style="color:#FEA116">ABOUT US</span></h5>
+                    <h1 class="fw-bold my-3">WELCOME TO <span style="color:#FEA116">HOTEL</span></h1>
+                    <h1 class="fw-bold my-3"><span style="color:#FEA116">STARBHAK</span></h1>
                     <p class="my-5">Hotel STARBHAK merupakan hotel satu-satunya di Jakarta yang menawarkan kebun tropis rindang seluas 9 hektar untuk para tamu. Hotel juga berkomitmen ambil bagian dalam program konservasi ramah lingkungan dan baru-baru ini mendapat piagam dari TUV Rheinland Group (Germany), dari Kementerian Pariwisata dan Ekonomi Kreatif Indonesis sebagai.
                     </p>
                 </div>
@@ -109,10 +113,7 @@
 
     <section id="room">
         <div class="container my-5">
-            <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#0e1d72">OUR ROOMS</span></h5>
-            {{-- <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">ROOMS</span></h1> --}}
-
-
+            <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#FEA116">OUR ROOMS</span></h5>
             <div class="row g-4">
               <div class="col-lg-4 col-md-6 my-5">
                 <div class="room-item shadow rounded overflow-hidden">
@@ -123,20 +124,8 @@
                         <div class="d-flex justify-content-between mb-3">
                             <h5 class="mb-0 fw-bold">Indonesia <br>
                               Standard Double</h5>
-                            {{-- <div class="rate">
-                                <small class="fa fa-star"></small>
-                                <small class="fa fa-star"></small>
-                                <small class="fa fa-star"></small>
-                                <small class="fa fa-star"></small>
-                                <small class="fa fa-star"></small>
-                            </div> --}}
                         </div>
                         <div class="d-flex mb-3">
-                            {{-- <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
-                            <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
-
-                            <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small> --}}
-
                         </div>
                         <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV, Bath, Wifi.</p>
                         <div class="d-flex justify-content-between">
@@ -149,27 +138,15 @@
             <div class="col-lg-4 col-md-6 my-5">
               <div class="room-item shadow rounded overflow-hidden">
                   <div class="position-relative">
-                      <img class="img-fluid" src="./room-2.jpg">
+                      <img class="img-fluid" src="./roomm.jpg">
                   </div>
                   <div class="p-4 mt-2">
                       <div class="d-flex justify-content-between mb-3">
                           <h5 class="mb-0 fw-bold">Indonesia <br>
                             Suite Family
                             </h5>
-                          {{-- <div class="rate">
-                              <small class="fa fa-star"></small>
-                              <small class="fa fa-star"></small>
-                              <small class="fa fa-star"></small>
-                              <small class="fa fa-star"></small>
-                              <small class="fa fa-star"></small>
-                          </div> --}}
                       </div>
                       <div class="d-flex mb-3">
-                          {{-- <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
-                          <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
-
-                          <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small> --}}
-
                       </div>
                       <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV, Bath, Wifi.</p>
                       <div class="d-flex justify-content-between">
@@ -188,21 +165,8 @@
                     <div class="d-flex justify-content-between mb-3">
                         <h5 class="mb-0 fw-bold">Indonesia <br>
                           Deluxe Double</h5>
-                        {{-- <div class="rate">
-                            <small class="fa fa-star"></small>
-                            <small class="fa fa-star"></small>
-                            <small class="fa fa-star"></small>
-                            <small class="fa fa-star"></small>
-                            <small class="fa fa-star"></small>
-                        </div> --}}
                     </div>
                     <div class="d-flex mb-3">
-                        {{-- <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
-                        <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
-
-                       
-                        <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small> --}}
-
                     </div>
                     <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV + Netflix, Bath, Wifi.</p>
                     <div class="d-flex justify-content-between">
@@ -218,8 +182,7 @@
 
     <section id="hotel">
       <div class="container my-5">
-          <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#0e1d72">FACILITY HOTEL</span></h5>
-          {{-- <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#0e1d72">HOTEL</span></h1> --}}
+          <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#FEA116">FACILITY HOTEL</span></h5>
           <div class="row g-4">
             <div class="col-lg-4 col-md-6 my-5">
               <div class="hotel-item shadow rounded overflow-hidden">
