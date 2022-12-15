@@ -1,33 +1,8 @@
-{{-- @extends('starter-admin')
-
-@section('isi')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-8">
-                <div class="card-body">
-                    <form action="{{ route('simpan-fasilitas') }}" method="post">
-                        @csrf
-                        <div class="form-group my-3">
-                            <label class="form-label my-3">Nama Fasilitas</label>
-                            <input type="text" name="nama_fasilitas_hotel"  class="form-control">
-                        </div>
-                        <div class="form-group my-3">
-                            <label class="form-label my-3">Deskripsi</label>
-                            <input type="text" name="deskripsi"  class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection --}}
-
 @extends('starter-admin')
 
 <!-- @section('judul', 'Form Create') -->
 @section('isi')
-<div class="container">
+<div class="container" style="margin-bottom: 30px">
      <div class="row justify-content-center">
           <div class="col-8">
                <div class="card">

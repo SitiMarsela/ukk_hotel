@@ -162,7 +162,7 @@
 
             {{-- @yield('isi') --}}
 
-            <div class="container">
+            <div class="container" style="margin-bottom: 30px">
                 <div class="card">
                     <div class="card-header">
                       KAMAR

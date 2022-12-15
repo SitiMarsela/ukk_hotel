@@ -19,7 +19,26 @@
     color: black;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
 
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #FEA116;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+}
 
 .fa{
    color: var(--primary);
@@ -59,4 +78,43 @@
 
 #room img{
     height: 40vh;
+}
+
+/* FOOTER */
+
+#footer{
+background-color: black;
+}
+
+footer{
+    color: white;
+    display: flex;
+}
+
+.left{
+    background-color: orange;
+    align-items: center;
+    /* background-color: orange; */
+    display: flex;
+    flex-basis: 30%;
+    justify-content: center;
+}
+.left h1{
+    font-weight: 600;
+}
+
+.footer-right{
+    background-color: var(--deepsea);
+    display: flex;
+    flex-basis: 70%;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.footer-right>ul{
+    list-style: none;
+}
+
+.footer-right p{
+    font-weight: 100;
 }

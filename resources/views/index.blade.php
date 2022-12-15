@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <link href="css/style.css" rel="stylesheet">
+    {{-- <link href="css/style.css" rel="stylesheet"> --}}
 </head>
   <body>
 
@@ -51,17 +51,17 @@
         <!-- Header End -->
 
 
-    <section id="home">
+     <section id="home">
       <div class="container">
         <div class="latar">
           <h1 class="py-2 fw-bold text-uppercase">HOTEL STARBHAK</h1>
           <a class="btn btn-primary fw-bold my-5 py-3 px-5" href="/booking">BOOKING SEKARANG</a>
       </div>
       </div>
-    </section>
+        </section>
 
 
-    <section id="about">
+        <section id="about">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-4">
@@ -106,12 +106,9 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-
-
-
-    <section id="room">
+        <section id="room">
         <div class="container my-5">
             <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#FEA116">OUR ROOMS</span></h5>
             <div class="row g-4">
@@ -177,10 +174,10 @@
         </div>
             </div>
         </div>
-    </section>
+        </section>
 
 
-    <section id="hotel">
+        <section id="hotel">
       <div class="container my-5">
           <h5 class="fw-bold my-2 text-center" style="font-size: 40px"><span style="color:#FEA116">FACILITY HOTEL</span></h5>
           <div class="row g-4">
@@ -225,27 +222,68 @@
               </div>
             </div>
           </div>
-      </div>
+      </div>  
+        </section>
 
-         <!-- Footer Start -->
-         <div class="container-fluid bg-dark text-light footer wow fadeIn mt-5" data-wow-delay="0.1s" >
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
-                            <p class="text-white mb-0">
-							 <a class="text-dark fw-medium" href="">Hotel Hebat
-							</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       <!-- Footer Start -->
+  <section>
+    <footer id="footer" style="margin-top: 30px">
+        <div class="left">
+              <h1>
+            HOTEL STARBHAK
+        </h1>
         </div>
-        <!-- Footer End -->
-  </section>
-   
+      
+        <div class=" d-flex footer-right">
+            <ul>
+                <li>
+                    <h2>ROOMS </h2>
+                </li>
+                <li>
+                    <p>Indonesia Standard Double</p>
+                </li>
+                <li>
+                    <p>Indonesia Suite Family</p>
+                </li>
+                <li>
+                    <p>Indonesia Deluxe Double</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>FACILITY HOTEL</h2>
+                </li>
+                <li>
+                    <p>FOOD & RESTAURANT</p>
+                </li>
+                <li>
+                    <p>SPA & FITNESS</p>
+                </li>
+                <li>
+                    <p>SPORT & GAMING</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>BOOKING</h2>
+                </li>
 
+                <li>
+                    <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary py-2 px-4" href="">BOOKING NOW</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+       
+   </footer>
+  </section>
+        <!-- Footer End -->
+
+    </div>
+    
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>

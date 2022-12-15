@@ -16,7 +16,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
             crossorigin="anonymous"></script>
     </head>
-    <body  style="background-color: lightcyan">
+    <body  style="background-color:khaki ">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -84,7 +84,7 @@
                                             <div
                                                 class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 {{-- <a class="small" href="#">Forgot Password?</a> --}}
-                                                <button class="btn btn-primary btn-block text-dark fw-bold"  style="background-color: lightcyan" type="submit" >Login</button>
+                                                <button class="btn btn-primary btn-block text-dark fw-bold"  style="background-color: khaki" type="submit" >Login</button>
                                             </div>
                                         </form>
                                     </div>

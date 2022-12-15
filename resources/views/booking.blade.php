@@ -252,20 +252,59 @@
        </div>
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn mt-5" data-wow-delay="0.1s" >
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
-                            <p class="text-white mb-0">
-							 <a class="text-dark fw-medium" href="">Hotel Hebat
-							</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section>
+    <footer id="footer" style="margin-top: 30px">
+        <div class="left">
+              <h1 style="color: white">
+            HOTEL STARBHAK
+        </h1>
         </div>
+      
+        <div class=" d-flex footer-right">
+            <ul>
+                <li>
+                    <h2 style="color: white">ROOMS</h2>
+                </li>
+                <li>
+                    <p>Indonesia Standard Double</p>
+                </li>
+                <li>
+                    <p>Indonesia Suite Family</p>
+                </li>
+                <li>
+                    <p>Indonesia Deluxe Double</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2 style="color: white">FACILITY HOTEL</h2>
+                </li>
+                <li>
+                    <p>FOOD & RESTAURANT</p>
+                </li>
+                <li>
+                    <p>SPA & FITNESS</p>
+                </li>
+                <li>
+                    <p>SPORT & GAMING</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2 style="color: white">BOOKING</h2>
+                </li>
+
+                <li>
+                    <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary py-2 px-4" href="">BOOKING NOW</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+       
+   </footer>
+  </section>
         <!-- Footer End -->
 
 

@@ -2,7 +2,7 @@
 
 @section('isi')
 
-<div class="container">
+<div class="container" style="margin-bottom: 30px">
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="card" style="overflow-x:auto">
@@ -13,11 +13,11 @@
                         {{ $message }}
                     </div>
                     @endif -->
-                    <a href="{{ route('create')}}" class="btn btn-info">Tambah Data</a>
+                    <a href="{{ route('create')}}" class="btn btn-info ">Tambah Data</a>
 
                     <!-- table -->
 
-                    <table class="table">
+                    <table class="table" style="margin-top: 10px">
                         <thead>
                             <tr scope="row">
                                 <th>No</th>
@@ -34,9 +34,9 @@
                                 <td>{{$item->tipe_kamar}}</td>
                                 <td>{{$item->nama_fasilitas}}</td>
                                 <td>{{$item->jumlah_kamar}}</td>
-                                <td>
+                                <td style="display: flex">
                                     <a href="{{ url('edit-kamar', $item->id) }}" class="btn btn-warning">Edit</a>
-                                    <form action="{{ url('delete-kamar', $item->id) }}" method="POST">
+                                    <form action="{{ url('delete-kamar', $item->id) }}" method="POST" style="padding-left: 10px">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger">Hapus</button>
